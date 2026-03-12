@@ -45,9 +45,9 @@ $img_url = get_template_directory_uri() . '/assets/img/';
 
                     foreach ($reasons as $reason) : ?>
                         <div class="check-item flex items-center gap-4">
-                            <img src="<?php echo esc_url($img_url . 'Icon-fa-solid-circle-check.png'); ?>"
-                                 alt="" class="w-6 h-6 flex-shrink-0" aria-hidden="true" style="filter: hue-rotate(170deg) brightness(0.9);">
-                            <!-- The image might not be teal by default; applied a slight hue if it was previously another color, but assuming it's teal matching design -->
+                            <svg class="w-6 h-6 flex-shrink-0 text-[#1CA0AA]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
                             <span class="text-gray-600 text-sm md:text-base font-semibold"><?php echo esc_html($reason); ?></span>
                         </div>
                     <?php endforeach; ?>

@@ -11,11 +11,20 @@ declare(strict_types=1);
 $img_url = get_template_directory_uri() . '/assets/img/';
 ?>
 
-<section class="py-20 md:py-28 bg-[#204185]">
-    <div class="max-w-[85rem] mx-auto px-4">
+<section class="relative pt-0 pb-20 md:pb-28">
+    <!-- Wave transition from white to blue -->
+    <div class="w-full">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto block" preserveAspectRatio="none">
+            <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,70 L1440,120 L0,120 Z" fill="#204185"/>
+        </svg>
+    </div>
+
+    <div class="bg-[#204185] -mt-1">
+    <div class="max-w-[85rem] mx-auto px-4 pb-20">
 
         <!-- Section Header -->
-        <div class="text-center mb-12">
+        <div class="text-center mb-14">
+            <img src="<?php echo esc_url($img_url . 'Logo-footer.png'); ?>" alt="" class="h-12 mx-auto mb-4" aria-hidden="true" loading="lazy">
             <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-wide">What We Offer</h2>
         </div>
 
@@ -48,5 +57,6 @@ $img_url = get_template_directory_uri() . '/assets/img/';
                 </div>
             <?php endforeach; ?>
         </div>
+    </div>
     </div>
 </section>

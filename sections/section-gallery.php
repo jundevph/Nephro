@@ -11,7 +11,7 @@ declare(strict_types=1);
 $img_url = get_template_directory_uri() . '/assets/img/';
 ?>
 
-<section id="facilities" class="gallery-section py-16 md:py-24 bg-[#F0FDFA] relative">
+<section id="facilities" class="gallery-section pt-32 md:pt-40 pb-16 md:pb-24 bg-[#F0FDFA] relative">
 
     <!-- Wave Top -->
     <div class="absolute top-0 left-0 w-full">
