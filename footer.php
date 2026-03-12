@@ -2,29 +2,29 @@
 
     <div
         class="relative bg-[#153B8A] bg-no-repeat bg-cover bg-top pt-32 pb-0"
-        style="background-image: url('<?php echo esc_url(nephro_asset_url('Home/BG footer.png')); ?>');"
+        style="background-image: url('<?php echo esc_url(nephro_asset_url('assets/img/bg-footer.png')); ?>');"
     >
         <div class="mx-auto max-w-7xl px-4">
             <div class="grid gap-10 md:grid-cols-12">
 
                 <!-- Column 1: Logo + Description + Social -->
                 <div class="md:col-span-3">
-                    <img class="h-14 w-auto" src="<?php echo esc_url(nephro_asset_url('Home/Logo-footer.png')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
+                    <img class="h-14 w-auto" src="<?php echo esc_url(nephro_asset_url('assets/img/logo-footer.png')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
                     <p class="mt-5 text-sm leading-relaxed text-white/80">
                         Excepteur sint occaecat cupidatat non proident sunt icula qui officia deserunt mollit anim est. laborum sed perspiciatis.
                     </p>
                     <div class="mt-5 flex items-center gap-3">
                         <a class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/15 hover:bg-white/25 transition" href="#" aria-label="Facebook">
-                            <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('Home/fb_footer.png')); ?>" alt="">
+                            <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('assets/img/fb-footer.png')); ?>" alt="">
                         </a>
                         <a class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/15 hover:bg-white/25 transition" href="#" aria-label="Instagram">
-                            <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('Home/ig_footer.png')); ?>" alt="">
+                            <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('assets/img/ig-footer.png')); ?>" alt="">
                         </a>
                         <a class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/15 hover:bg-white/25 transition" href="#" aria-label="LinkedIn">
-                            <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('Home/linkd_footer.png')); ?>" alt="">
+                            <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('assets/img/linkd-footer.png')); ?>" alt="">
                         </a>
                         <a class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/15 hover:bg-white/25 transition" href="#" aria-label="TikTok">
-                            <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('Home/tiktok-footer.png')); ?>" alt="">
+                            <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('assets/img/tiktok-footer.png')); ?>" alt="">
                         </a>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                 <!-- Column 3: Pasig Branch -->
                 <div class="md:col-span-4">
                     <h3 class="flex items-center gap-2 text-sm font-bold uppercase tracking-wide">
-                        <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('Home/loc-footer.png')); ?>" alt="">
+                        <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('assets/img/loc-footer.png')); ?>" alt="">
                         Pasig Branch
                     </h3>
                     <div class="mt-4 text-sm leading-relaxed text-white/80">
@@ -60,7 +60,7 @@
                 <!-- Column 4: Malabon Branch -->
                 <div class="md:col-span-3">
                     <h3 class="flex items-center gap-2 text-sm font-bold uppercase tracking-wide">
-                        <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('Home/loc-footer.png')); ?>" alt="">
+                        <img class="h-4 w-4" src="<?php echo esc_url(nephro_asset_url('assets/img/loc-footer.png')); ?>" alt="">
                         Malabon City - Tinajeros
                     </h3>
                     <div class="mt-4 text-sm leading-relaxed text-white/80">
