@@ -11,20 +11,18 @@ declare(strict_types=1);
 $img_url = get_template_directory_uri() . '/assets/img/';
 ?>
 
-<section class="relative pt-0 pb-20 md:pb-28">
+<section class="relative bg-[#f3fbfa]">
     <!-- Wave transition from white to blue -->
     <div class="w-full">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto block" preserveAspectRatio="none">
-            <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,70 L1440,120 L0,120 Z" fill="#204185"/>
-        </svg>
+        <img src="<?php echo esc_url($img_url . 'wave1.png'); ?>" alt="" class="w-full h-auto block" aria-hidden="true">
     </div>
 
     <div class="bg-[#204185] -mt-1">
-    <div class="max-w-[85rem] mx-auto px-4 pb-20">
+    <div class="max-w-[100%] bg-[#214099] mx-auto px-[6.5rem] pt-10 pb-20">
 
         <!-- Section Header -->
         <div class="text-center mb-14">
-            <img src="<?php echo esc_url($img_url . 'Logo-footer.png'); ?>" alt="" class="h-12 mx-auto mb-4" aria-hidden="true" loading="lazy">
+            <img src="<?php echo esc_url($img_url . 'what-we-offer-logo.png'); ?>" alt="Nephro Access" class="h-12 mx-auto mb-4" loading="lazy">
             <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-wide">What We Offer</h2>
         </div>
 

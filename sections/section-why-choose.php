@@ -11,7 +11,7 @@ declare(strict_types=1);
 $img_url = get_template_directory_uri() . '/assets/img/';
 ?>
 
-<section class="why-choose-section py-20 lg:py-28 bg-[#F3FBFA] overflow-hidden">
+<section class="why-choose-section py-5 lg:pt-[5rem] bg-[#F3FBFA] overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
 
         <!-- Section Header -->
@@ -25,7 +25,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
         <div class="relative flex flex-col lg:block lg:min-h-[500px]">
 
             <!-- Left Image -->
-            <div class="w-[90%] md:w-[60%] lg:w-[48%] rounded-[20px] overflow-hidden lg:absolute left-0 top-0 z-0">
+            <div class="w-[80%] md:w-[45%] lg:w-[39%] rounded-[20px] overflow-hidden lg:absolute left-[10rem] top-0 z-0">
                 <img src="<?php echo esc_url($img_url . 'why-choos-us-img.png'); ?>"
                      alt="Why choose Nephro Access"
                      class="w-full h-auto object-cover"
@@ -55,7 +55,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
             </div>
 
             <!-- Overlapping Dark Blue Block -->
-            <div class="bg-[#204185] rounded-[16px] p-8 md:p-10 lg:p-12 shadow-[0_20px_50px_rgba(32,65,133,0.25)] mt-[-40px] lg:mt-0 lg:absolute lg:bottom-[-60px] right-0 lg:w-[58%] z-20 relative mx-4 lg:mx-0">
+            <div class="bg-[#204185] rounded-[16px] p-8 md:p-10 lg:p-12 mt-[-40px] lg:mt-0 lg:absolute lg:bottom-[0px] lg:left-[40%] lg:right-auto lg:w-[55%] z-20 relative mx-4 lg:mx-0">
                 <p class="text-white/95 text-sm md:text-[15px] leading-relaxed">
                     Morbi ornare velit vitae felis commodo, at blandit est vestibulum. Mauris quam arcu, facilisis ut vestibulum sit amet, pellentesque in metus. Aenean pharetra mauris ac sem faucibus, consectetur ullamcorper ex fermentum. Mauris placerat scelerisque pulvinar. Etiam accumsan justo ut justo elementum rhoncus. Morbi ullamcorper pharetra ligula, eget vehicula nunc dignissim hendrerit. In dignissim sodales arcu ac mattis. Etiam ut ante ut nunc gravida.
                 </p>

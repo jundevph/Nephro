@@ -21,7 +21,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
     <div class="relative z-10 max-w-7xl mx-auto px-4">
 
         <!-- Section Header -->
-        <div class="text-center mb-4">
+        <div class="text-center mb-4 mt-8 md:mt-40">
             <p class="text-[#14919B] text-sm font-semibold uppercase tracking-wide mb-2">Gallery</p>
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0D3B66] mb-4">Our Facility</h2>
             <p class="text-gray-500 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
@@ -38,7 +38,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md">
                     <img src="<?php echo esc_url($img_url . $image); ?>"
                          alt="Nephro Access facility photo <?php echo esc_attr((string)($index + 1)); ?>"
-                         class="w-full h-48 md:h-56 object-cover"
+                         class="w-full h-48 md:h-80 object-cover"
                          loading="lazy">
                 </div>
             <?php endforeach; ?>
@@ -47,7 +47,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
         <!-- Show More Button -->
         <div class="text-center mt-10">
             <a href="#"
-               class="inline-block bg-[#0D3B66] hover:bg-[#0A2E52] text-white text-sm font-semibold px-8 py-3 rounded-full transition-colors">
+               class="inline-block bg-[#0D3B66] hover:bg-[#0A2E52] text-white text-sm font-semibold px-8 py-3 rounded-full transition-colors mt-14">
                 Show More
             </a>
         </div>

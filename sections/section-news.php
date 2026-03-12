@@ -23,7 +23,10 @@ $img_url = get_template_directory_uri() . '/assets/img/';
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             <?php
-            // Try to pull from WordPress posts first
+            $cards_shown = 0;
+            $fallback_images = ['news-img1.png', 'news-img2.png', 'news-img3.png'];
+
+            // Pull from WordPress posts
             $news_query = new WP_Query([
                 'post_type'      => 'post',
                 'posts_per_page' => 3,
@@ -33,18 +36,18 @@ $img_url = get_template_directory_uri() . '/assets/img/';
             if ($news_query->have_posts()) :
                 while ($news_query->have_posts()) : $news_query->the_post(); ?>
                     <article class="news-card bg-white shadow-sm rounded-2xl overflow-hidden border border-gray-100">
-                        <div class="overflow-hidden h-56">
+                        <a href="<?php the_permalink(); ?>" class="block overflow-hidden h-56">
                             <?php if (has_post_thumbnail()) :
                                 the_post_thumbnail('medium_large', [
                                     'class'   => 'w-full h-56 object-cover',
                                     'loading' => 'lazy',
                                 ]);
                             else : ?>
-                                <img src="<?php echo esc_url($img_url . 'news-img1.png'); ?>"
+                                <img src="<?php echo esc_url($img_url . $fallback_images[$cards_shown]); ?>"
                                      alt="<?php the_title_attribute(); ?>"
                                      class="w-full h-56 object-cover" loading="lazy">
                             <?php endif; ?>
-                        </div>
+                        </a>
 
                         <div class="p-6">
                             <h3 class="text-lg font-extrabold text-[#204185] mb-2">
@@ -66,48 +69,49 @@ $img_url = get_template_directory_uri() . '/assets/img/';
                             </a>
                         </div>
                     </article>
+                    <?php $cards_shown++; ?>
                 <?php endwhile;
                 wp_reset_postdata();
+            endif;
 
-            else :
-                // Fallback static cards when no posts exist
-                $static_news = [
-                    ['img' => 'news-img1.png', 'title' => 'News Tittle Here', 'date' => '23 September 2025'],
-                    ['img' => 'news-img2.png', 'title' => 'News Tittle Here', 'date' => '23 September 2025'],
-                    ['img' => 'news-img3.png', 'title' => 'News Tittle Here', 'date' => '23 September 2025'],
-                ];
+            // Fill remaining slots with static fallback cards
+            $static_news = [
+                ['img' => 'news-img1.png', 'title' => 'News Title Here', 'date' => '23 September 2025'],
+                ['img' => 'news-img2.png', 'title' => 'News Title Here', 'date' => '23 September 2025'],
+                ['img' => 'news-img3.png', 'title' => 'News Title Here', 'date' => '23 September 2025'],
+            ];
 
-                foreach ($static_news as $news) : ?>
-                    <article class="news-card bg-white shadow-sm rounded-2xl overflow-hidden border border-gray-100">
-                        <div class="overflow-hidden h-56">
-                            <img src="<?php echo esc_url($img_url . $news['img']); ?>"
-                                 alt="<?php echo esc_attr($news['title']); ?>"
-                                 class="w-full h-56 object-cover"
-                                 loading="lazy">
-                        </div>
+            for ($i = $cards_shown; $i < 3; $i++) :
+                $news = $static_news[$i]; ?>
+                <article class="news-card bg-white shadow-sm rounded-2xl overflow-hidden border border-gray-100">
+                    <div class="overflow-hidden h-56">
+                        <img src="<?php echo esc_url($img_url . $news['img']); ?>"
+                             alt="<?php echo esc_attr($news['title']); ?>"
+                             class="w-full h-56 object-cover"
+                             loading="lazy">
+                    </div>
 
-                        <div class="p-6">
-                            <h3 class="text-lg font-extrabold text-[#204185] mb-2">
-                                <a href="#" class="hover:text-[#1CA0AA] transition-colors">
-                                    <?php echo esc_html($news['title']); ?>
-                                </a>
-                            </h3>
-
-                            <time class="text-[#204185] text-xs font-semibold block mb-3">
-                                <?php echo esc_html($news['date']); ?>
-                            </time>
-
-                            <p class="text-gray-500 text-sm leading-relaxed mb-5">
-                                Excepteur sint occaecat cupidatat non proident sunt iculpa qui officia
-                            </p>
-
-                            <a href="#" class="news-read-more text-[#204185] text-sm font-bold hover:text-[#1CA0AA] transition-colors">
-                                Read More
+                    <div class="p-6">
+                        <h3 class="text-lg font-extrabold text-[#204185] mb-2">
+                            <a href="#" class="hover:text-[#1CA0AA] transition-colors">
+                                <?php echo esc_html($news['title']); ?>
                             </a>
-                        </div>
-                    </article>
-                <?php endforeach;
-            endif; ?>
+                        </h3>
+
+                        <time class="text-[#204185] text-xs font-semibold block mb-3">
+                            <?php echo esc_html($news['date']); ?>
+                        </time>
+
+                        <p class="text-gray-500 text-sm leading-relaxed mb-5">
+                            Excepteur sint occaecat cupidatat non proident sunt iculpa qui officia
+                        </p>
+
+                        <a href="#" class="news-read-more text-[#204185] text-sm font-bold hover:text-[#1CA0AA] transition-colors">
+                            Read More
+                        </a>
+                    </div>
+                </article>
+            <?php endfor; ?>
 
         </div>
     </div>

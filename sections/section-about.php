@@ -11,7 +11,7 @@ declare(strict_types=1);
 $img_url = get_template_directory_uri() . '/assets/img/';
 ?>
 
-<section id="about" class="about-section py-20 lg:py-28 bg-white overflow-hidden">
+<section id="about" class="about-section py-20 lg:py-28 mb-[7rem] bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
 
         <div class="relative flex flex-col lg:block lg:min-h-[620px]">
@@ -20,7 +20,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
             <div class="hidden lg:block absolute right-0 top-0 w-[48%] z-[1] rounded-[20px] overflow-hidden shadow-xl bg-white border-[6px] border-white">
                 <img src="<?php echo esc_url($img_url . 'abt-img1.png'); ?>"
                      alt="Dialysis Chair at Nephro Access"
-                     class="w-full h-[380px] object-cover about-image"
+                     class="w-full h-[460px] object-cover about-image"
                      loading="lazy">
             </div>
 
@@ -44,7 +44,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
             </div>
 
             <!-- Z-INDEX LAYER 3 (front): Storefront Image — overlaps card bottom-left -->
-            <div class="relative lg:absolute lg:left-[6%] lg:bottom-[-40px] w-[85%] lg:w-[42%] z-[3] rounded-[20px] overflow-hidden shadow-2xl bg-white border-[6px] border-white mt-[-30px] lg:mt-0">
+            <div class="relative lg:absolute lg:left-[6%] lg:bottom-[-100px] w-[85%] lg:w-[42%] z-[3] rounded-[20px] overflow-hidden shadow-2xl bg-white border-[6px] border-white mt-[-30px] lg:mt-0">
                 <img src="<?php echo esc_url($img_url . 'abt-img2.png'); ?>"
                      alt="Nephro Access Center Storefront"
                      class="w-full h-[250px] md:h-[300px] object-cover about-image"
@@ -60,7 +60,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
             </div>
 
             <!-- Read More Button — bottom right -->
-            <div class="lg:absolute lg:bottom-[-30px] lg:right-[4%] z-[4] mt-8 lg:mt-0 flex lg:justify-end">
+            <div class="lg:absolute lg:bottom-[-10px] lg:right-[4%] z-[4] mt-8 lg:mt-0 flex lg:justify-end">
                 <a href="#"
                    class="inline-block bg-[#204185] hover:bg-[#163066] text-white text-sm font-semibold px-8 py-3.5 rounded-[8px] transition-transform hover:-translate-y-1 shadow-md">
                     Read More

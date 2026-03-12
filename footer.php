@@ -12,11 +12,11 @@ $img_url = get_template_directory_uri() . '/assets/img/';
 ?>
 
     <!-- Footer Wave -->
-    <div class="relative w-full -mb-1 bg-white">
-        <img src="<?php echo esc_url($img_url . 'wave3.png'); ?>" alt="" class="w-full h-auto" aria-hidden="true">
+    <div class="relative w-full -mb-1">
+        <img src="<?php echo esc_url($img_url . 'wave3.png'); ?>" alt="" class="w-full h-auto block" aria-hidden="true">
     </div>
 
-    <footer class="site-footer bg-[#204185] text-white pt-16 pb-0 mt-0 relative">
+    <footer class="site-footer bg-[#214099] text-white pt-16 pb-0 mt-0 relative">
 
         <div class="max-w-[85rem] mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">

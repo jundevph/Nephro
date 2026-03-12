@@ -7,12 +7,17 @@
 .hero {
     position: relative;
     overflow: hidden;
-    min-height: 600px;
+    width: 100%;
+    min-height: 440px;
+    height: clamp(440px, 48vw, 620px);
+    background-size: 100% 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 .hero-bg {
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+    background-position: center top;
     background-repeat: no-repeat;
 }
 
@@ -26,6 +31,67 @@
 
 .hero h1 {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: clamp(4.5rem, 9vw, 9rem);
+    font-size: clamp(2.1rem, 5vw, 3.9rem);
+    line-height: 1.08;
+}
+
+.hero .hero-content {
+    padding-top: clamp(2.75rem, 5vw, 5rem);
+    padding-bottom: clamp(2.5rem, 5vw, 5rem);
+}
+
+.hero .hero-lower-content {
+    transform: translateY(clamp(1.5rem, 4vw, 4rem));
+}
+
+.hero .hero-lower-content p {
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    line-height: 1.45;
+}
+
+.hero .cta-button {
+    font-size: clamp(0.72rem, 0.95vw, 0.86rem);
+    padding: 0.85rem 1.75rem;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        min-height: 430px;
+        height: clamp(430px, 62vw, 560px);
+        background-size: 100% 100%;
+        background-position: center top;
+    }
+
+    .hero .hero-lower-content {
+        transform: translateY(clamp(1rem, 2.5vw, 2rem));
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        min-height: 380px;
+        height: clamp(380px, 86vw, 500px);
+        background-size: cover;
+        background-position: 58% center;
+    }
+
+    .hero h1 {
+        margin-bottom: clamp(2.25rem, 8vw, 4rem);
+    }
+
+    .hero .hero-lower-content {
+        transform: none;
+    }
+
+    .hero .hero-lower-content p {
+        font-size: 0.92rem;
+    }
+
+    .hero .cta-button {
+        font-size: 0.72rem;
+        padding: 0.78rem 1.5rem;
+    }
 }
 
 .hero .cta-button {
