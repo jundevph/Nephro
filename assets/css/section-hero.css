@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Section: Hero
+   Description: Hero banner with background wave, heading, description, and CTA
+   Owner: [Team Member Name]
+   ========================================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+}
+
+.hero-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.hero h1 {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero .cta-button {
+    transition: all 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(20, 145, 155, 0.4);
+}
+
+/* Feature pills below hero */
+.feature-pills {
+    position: relative;
+    z-index: 10;
+}
+
+.feature-pill {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-pill:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}

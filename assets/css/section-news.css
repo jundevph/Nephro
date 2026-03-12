@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Section: News & Events
+   Description: Blog/news cards with date and read more links
+   Owner: [Team Member Name]
+   ========================================================================== */
+
+.news-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.news-card img {
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.05);
+}
+
+.news-read-more {
+    transition: color 0.2s ease;
+}
+
+.news-read-more:hover {
+    color: #0D3B66;
+}

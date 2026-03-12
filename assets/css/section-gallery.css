@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Section: Gallery / Our Facility
+   Description: Image gallery showcasing facility photos
+   Owner: [Team Member Name]
+   ========================================================================== */
+
+.gallery-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+}
+
+.gallery-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}

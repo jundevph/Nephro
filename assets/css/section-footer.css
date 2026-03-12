@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Section: Footer
+   Description: Multi-column footer with logo, quick links, branches, and map
+   Owner: [Team Member Name]
+   ========================================================================== */
+
+.site-footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.site-footer a {
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.site-footer a:hover {
+    opacity: 0.85;
+}
+
+.footer-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.footer-divider {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}

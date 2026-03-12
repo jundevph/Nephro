@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Section: About Us
+   Description: About section with text content and two images layout
+   Owner: [Team Member Name]
+   ========================================================================== */
+
+.about-section {
+    position: relative;
+}
+
+.about-section .about-image {
+    transition: transform 0.4s ease;
+}
+
+.about-section .about-image:hover {
+    transform: scale(1.02);
+}
+
+.about-card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.read-more-btn {
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    transform: translateX(4px);
+}

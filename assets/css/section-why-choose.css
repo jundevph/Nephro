@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Section: Why Choose Us
+   Description: Image left, bullet points right layout
+   Owner: [Team Member Name]
+   ========================================================================== */
+
+.why-choose-section {
+    position: relative;
+}
+
+.check-item {
+    transition: transform 0.2s ease;
+}
+
+.check-item:hover {
+    transform: translateX(6px);
+}
+
+.why-choose-image {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.why-choose-image:hover {
+    transform: scale(1.02);
+}

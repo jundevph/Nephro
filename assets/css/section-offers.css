@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Section: What We Offer
+   Description: Grid of service offering cards (2 rows)
+   Owner: [Team Member Name]
+   ========================================================================== */
+
+.offer-card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.offer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-color: #14919B;
+}
+
+.offer-card .offer-icon {
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover .offer-icon {
+    transform: scale(1.1);
+}

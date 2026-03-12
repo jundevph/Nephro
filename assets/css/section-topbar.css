@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Section: Top Bar
+   Description: Contact info bar with phone numbers, locations, and social icons
+   Owner: [Team Member Name]
+   ========================================================================== */
+
+.topbar {
+    background: linear-gradient(90deg, #0D3B66 0%, #14919B 100%);
+}
+
+.topbar a {
+    transition: opacity 0.2s ease;
+}
+
+.topbar a:hover {
+    opacity: 0.8;
+}
+
+.topbar-divider {
+    width: 1px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.3);
+}
