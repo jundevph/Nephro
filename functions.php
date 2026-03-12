@@ -3,13 +3,33 @@
  * Theme Functions
  */
 
-function setup_tailwind_theme() {
-    // 1. Add support for Title Tags (so you don't have to hardcode them in header.php)
-    add_theme_support('title-tag');
+function nephro_setup_theme() {
+	add_theme_support('title-tag');
+	add_theme_support('post-thumbnails');
 
-    // 2. Load Tailwind CSS via CDN (Great for collaboration/dev)
-    wp_enqueue_script('tailwind-cdn', 'https://cdn.tailwindcss.com', array(), null, false);
+	register_nav_menus(
+		array(
+			'main-menu'   => __('Main Menu', 'nephro'),
+			'footer-menu' => __('Footer Menu', 'nephro'),
+		)
+	);
 }
+add_action('after_setup_theme', 'nephro_setup_theme');
 
-// This tells WordPress to run the function above when it's loading scripts
-add_action('wp_enqueue_scripts', 'setup_tailwind_theme');
+function nephro_enqueue_assets() {
+	// Tailwind via CDN (good for quick theme development).
+	wp_enqueue_script('tailwind-cdn', 'https://cdn.tailwindcss.com', array(), null, false);
+
+	// Theme stylesheet for small custom tweaks.
+	wp_enqueue_style('nephro-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
+}
+add_action('wp_enqueue_scripts', 'nephro_enqueue_assets');
+
+/**
+ * Build a safe theme asset URL (handles spaces).
+ */
+function nephro_asset_url($relative_path) {
+	$relative_path = ltrim((string) $relative_path, '/');
+	$parts         = array_map('rawurlencode', explode('/', $relative_path));
+	return trailingslashit(get_template_directory_uri()) . implode('/', $parts);
+}
