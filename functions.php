@@ -1,9 +1,15 @@
 <?php
-function load_my_scripts() {
-    // This is how you link your CSS
-    wp_enqueue_style('main-style', get_stylesheet_uri());
-    
-    // This is how you link a JS library (like Alpine.js or React)
-    wp_enqueue_script('my-js', 'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', array(), null, true);
+/**
+ * Theme Functions
+ */
+
+function setup_tailwind_theme() {
+    // 1. Add support for Title Tags (so you don't have to hardcode them in header.php)
+    add_theme_support('title-tag');
+
+    // 2. Load Tailwind CSS via CDN (Great for collaboration/dev)
+    wp_enqueue_script('tailwind-cdn', 'https://cdn.tailwindcss.com', array(), null, false);
 }
-add_action('wp_enqueue_scripts', 'load_my_scripts');
+
+// This tells WordPress to run the function above when it's loading scripts
+add_action('wp_enqueue_scripts', 'setup_tailwind_theme');
