@@ -1,1 +1,8 @@
-<h1>Hello World</h1>
+<?php get_header(); ?> <main>
+    <h1><?php the_title(); ?></h1>
+    <div class="content">
+        <?php the_content(); ?>
+    </div>
+</main>
+
+<?php get_footer(); ?>
