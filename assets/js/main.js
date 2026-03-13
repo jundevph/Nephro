@@ -73,7 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (target) {
                 e.preventDefault();
                 const navHeight = navbar?.offsetHeight ?? 0;
-                const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
+                const scrollOffset = -200;
+                const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight - scrollOffset;
 
                 window.scrollTo({
                     top: targetPos,

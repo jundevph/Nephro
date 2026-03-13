@@ -18,7 +18,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
     </div>
 
     <div class="bg-[#204185] -mt-1">
-    <div class="max-w-[100%] bg-[#214099] mx-auto px-[6.5rem] pt-10 pb-20">
+    <div class="max-w-[100%] bg-[#214099] mx-auto px-4 md:px-[6.5rem] pt-10 pb-20">
 
         <!-- Section Header -->
         <div class="text-center mb-14">
@@ -45,7 +45,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
             ];
 
             foreach ($offers as $offer) : ?>
-                <div class="bg-[#F5FBFC] p-6 lg:p-8 rounded-[16px] shadow-lg text-center transition-transform hover:-translate-y-1">
+                <div class="bg-[#F5FBFC] p-6 lg:p-7 rounded-[16px] shadow-lg text-center transition-transform hover:-translate-y-1">
                     <h3 class="text-sm lg:text-base font-bold text-[#14919B] mb-4">
                         <?php echo esc_html($offer['title']); ?>
                     </h3>

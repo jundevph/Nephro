@@ -18,18 +18,18 @@ $img_url = get_template_directory_uri() . '/assets/img/';
 
     <!-- Content -->
     <div class="hero-content relative z-[2] max-w-[85rem] mx-auto px-4">
-        <div class="max-w-2xl">
+        <div class="max-w-2xl mx-auto md:mx-0 text-center md:text-left">
             <h1 class="text-[2.5rem] md:text-5xl lg:text-[4.2rem] font-bold text-white leading-[1.1]">
                 Alagang Totoo,<br>Alagang Pamilya.
             </h1>
 
-            <div class="hero-lower-content max-w-[18rem] md:max-w-[19.5rem]">
-                <p class="text-[#707070] text-sm md:text-base leading-relaxed mb-8 font-medium">
+            <div class="hero-lower-content max-w-[18rem] md:max-w-[17.7rem] mx-auto md:mx-0">
+                <p class="text-white md:text-[#707070] text-sm md:text-base leading-relaxed mb-8 font-medium">
                     We understand that a diagnosis of chronic kidney disease marks the beginning of a new journey, one that can feel overwhelming for both you and your loved ones.
                 </p>
 
                 <a href="#about"
-                   class="cta-button inline-block bg-[#1CA0AA] hover:bg-[#14838b] text-white font-bold text-xs md:text-sm uppercase tracking-wide px-8 py-4 rounded-[6px] transition-all shadow-md">
+                   class="cta-button block w-fit mx-auto md:inline-block bg-[#1CA0AA] hover:bg-[#14838b] text-white font-bold text-xs md:text-sm uppercase tracking-wide px-8 py-4 rounded-[6px] transition-all shadow-md">
                     Book Your Session Today
                 </a>
             </div>
@@ -40,7 +40,7 @@ $img_url = get_template_directory_uri() . '/assets/img/';
 </section>
 
 <!-- Feature Blocks -->
-<section class="feature-pills relative -mt-16 md:mt-[5rem] z-20 pb-16">
+<section class="feature-pills relative mt-8 md:mt-[5rem] z-20 pb-16">
     <div class="max-w-6xl mx-auto px-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center">
             <?php

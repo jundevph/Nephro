@@ -17,18 +17,18 @@
     opacity: 0.85;
 }
 
-.footer-wave {
+/* .footer-wave {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     pointer-events: none;
-}
+} */
 
-.footer-divider {
+/* .footer-divider {
     width: 1px;
-    background: rgba(255, 255, 255, 0.2);
-}
+    background: rgba(255, 255, 255, 1);
+} */
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
